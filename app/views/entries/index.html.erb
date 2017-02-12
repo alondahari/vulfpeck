@@ -1,0 +1,7 @@
+<ul>
+  <% @entries.each do |entry| %>
+    <li><%= entry.entry %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Add another entry', new_entry_path %></p>

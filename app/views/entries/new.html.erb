@@ -1,0 +1,26 @@
+<div class="container">
+
+  <h1>We have 4 tickets!</h1>
+  <p>Vut vould you do for a ticket??</p>
+  <%= form_for(@entry, url: '/') do |f| %>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
+      <%= f.text_field :name, class: 'mdl-textfield__input' %>
+      <%= f.label :name, class: 'mdl-textfield__label' %>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
+      <%= f.text_field :email, class: 'mdl-textfield__input' %>
+      <%= f.label :email, class: 'mdl-textfield__label' %>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
+      <%= f.text_area :entry, class: 'mdl-textfield__input entry' %>
+      <%= f.label :entry, class: 'mdl-textfield__label' %>
+    </div>
+
+
+    <div class="submit">
+      <%= f.submit 'Go fuck yourself', class: 'mdl-button mdl-js-button mdl-button--raised' %>
+    </div>
+  <% end %>
+</div>
