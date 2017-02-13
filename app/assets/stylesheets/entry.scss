@@ -13,20 +13,6 @@
 
 }
 
-// .text-input{
-//   width: 250px;
-//   height: 30px;
-//   border-radius: 5px;
-//   font-size: 20px;
-//   margin-bottom: 20px;
-// }
-//
-// .entry-label {
-//   display: block;
-//   text-align: center;
-//   font-size: 25px;
-// }
-//
 .form-group {
   display: block;
   margin-bottom: 40px;
@@ -34,4 +20,18 @@
 
 .entry {
   height: 50px;
+}
+
+.mdl-card {
+  min-height: 0;
+  margin-bottom: 30px;
+
+  &:first-child {
+    margin-top: 40px;
+  }
+}
+
+.mdl-card__supporting-text {
+  white-space: pre;
+
 }

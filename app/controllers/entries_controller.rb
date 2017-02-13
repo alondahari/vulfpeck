@@ -9,9 +9,12 @@ class EntriesController < ApplicationController
 
   def create
     entry_params = params.require('entry').permit('name', 'email', 'entry')
-    logger.info entry_params
-    entry = Entry.create(entry_params)
-    redirect_to '/leaderboard'
+    if entry_params['name'] == '' || entry_params['email'] == '' || entry_params['entry'] == ''
+      redirect_to '/', notice: 'Please fill all fields'
+    else
+      entry = Entry.create(entry_params)
+      redirect_to '/leaderboard'
+    end
   end
 
 end

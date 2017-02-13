@@ -1,7 +1,12 @@
-<ul>
-  <% @entries.each do |entry| %>
-    <li><%= entry.entry %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <ul>
+    <% @entries.each do |entry| %>
+    <li class="mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__supporting-text"><%= entry.entry %></div>
+    </li>
+    <% end %>
+  </ul>
 
-<p><%= link_to 'Add another entry', new_entry_path %></p>
+  <%= link_to 'Add another entry', new_entry_path, class: 'mdl-button mdl-js-button mdl-button--raised' %>
+
+</div>
