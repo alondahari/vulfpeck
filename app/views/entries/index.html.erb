@@ -1,12 +1,27 @@
 <div class="container">
   <ul>
     <% @entries.each do |entry| %>
-    <li class="mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__supporting-text"><%= entry.entry %></div>
-    </li>
+      <div class="relative" data-votes=<%= entry.votes %>>
+        <span class="mdl-badge" data-badge=<%= entry.votes %>></span>
+        <li class="mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text"><%= entry.entry %></div>
+          <div class="mdl-card__menu">
+            <button
+              class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect up-vote"
+              data-id="<%= entry.id %>"
+            >
+              <i class="material-icons">plus_one</i>
+            </button>
+          </div>
+        </li>
+      </div>
     <% end %>
   </ul>
-
-  <%= link_to 'Add another entry', new_entry_path, class: 'mdl-button mdl-js-button mdl-button--raised' %>
-
+  <div class="add-new-button">
+    <%= link_to(new_entry_path) do %>
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+      <i class="material-icons">add</i>
+    </button>
+    <% end %>
+  </div>
 </div>

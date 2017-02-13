@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
   def index
-    @entries = Entry.all
+    @entries = Entry.all.sort {|x, y| y[:votes] <=> x[:votes]}
   end
 
   def new
@@ -17,4 +17,14 @@ class EntriesController < ApplicationController
     end
   end
 
+  def upvote
+    entry = Entry.find(params[:id])
+    entry[:votes] = entry[:votes] + 1
+
+    if entry.save
+      render status: 200, json: ({new_votes: entry[:votes]}).to_json
+    else
+      render status: 500
+    end
+  end
 end

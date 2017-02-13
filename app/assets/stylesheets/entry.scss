@@ -35,3 +35,24 @@
   white-space: pre;
 
 }
+
+.mdl-button--icon {
+  margin-top: -7px;
+}
+
+.add-new-button {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+}
+
+.relative {
+  position: relative;
+}
+
+.mdl-badge {
+  position: absolute;
+  z-index: 100;
+  left: -13px;
+
+}
