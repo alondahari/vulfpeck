@@ -1,7 +1,8 @@
 <div class="container">
+  <p class="explanation">go ahead and vote for your favorite entries, although it won't really affect the end result.</p>
   <ul>
     <% @entries.each do |entry| %>
-      <div class="relative" data-votes=<%= entry.votes %>>
+      <div class="entry" data-votes=<%= entry.votes %>>
         <span class="mdl-badge" data-badge=<%= entry.votes %>></span>
         <li class="mdl-card mdl-shadow--2dp">
           <div class="mdl-card__supporting-text"><%= entry.entry %></div>

@@ -11,10 +11,10 @@ $(document).ready(function() {
   $('.up-vote').on('click', function() {
     const el = $(this)
     const id = el.data('id')
-    const container = el.closest('.relative')
+    const container = el.closest('.entry')
     const badge = container.find('.mdl-badge')
     const ul = $('ul')
-    const li = ul.find('.relative')
+    const li = ul.find('.entry')
     fetch(`/upvote/${id}`, {
       method: 'POST'
     }).then(function(res) {

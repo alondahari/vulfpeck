@@ -24,11 +24,6 @@
 
 .mdl-card {
   min-height: 0;
-  margin-bottom: 30px;
-
-  &:first-child {
-    margin-top: 40px;
-  }
 }
 
 .mdl-card__supporting-text {
@@ -46,8 +41,10 @@
   right: 40px;
 }
 
-.relative {
+.entry {
   position: relative;
+  margin-bottom: 30px;
+
 }
 
 .mdl-badge {
@@ -55,4 +52,9 @@
   z-index: 100;
   left: -13px;
 
+}
+
+.explanation {
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
